@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "node src/cli.js",
-    "check": "node --check src/cli.js && node --check src/cleaner.js && node --check src/windows.js && node --check src/format.js"
+    "check": "node --check src/cli.js && node --check src/cleaner.js && node --check src/windows.js && node --check src/format.js",
+    "install:task": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install-scheduled-task.ps1"
   },
   "keywords": [
     "windows",

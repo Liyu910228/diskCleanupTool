@@ -81,6 +81,26 @@ Purge old project artifacts:
 wclean purge --path D:\liyucode --execute
 ```
 
+## Weekly Scheduled Cleanup
+
+Install a Windows Task Scheduler job that runs every Tuesday at 10:00:
+
+```powershell
+npm run install:task
+```
+
+The task runs:
+
+```powershell
+node .\src\cli.js clean --execute
+```
+
+Logs are written to:
+
+```powershell
+.\logs\scheduled-clean-*.log
+```
+
 ## Notes
 
 Run PowerShell or Windows Terminal as administrator if you want to clean system-level temp folders. The tool still works without admin rights, but some locked or protected files will be skipped.
